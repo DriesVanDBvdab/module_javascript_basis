@@ -11,3 +11,9 @@ De oefeningen voor de datum en tijd voor javascript bevinden zich in de [Interca
 ## 1.4 Element zoeken
 De oefeningen voor het element zoeken voor javascript bevinden zich in de [elementen zoeken](oefeningen/elementen_zoeken) folder.
 </br>
+## 1.5 Veel gemaakte fouten
+De oefeningen voor de 'veel gemaakte fouten' voor javascript bevinden zich in de [veel gemaakte fouten](oefeningen/veel_gemaakte_fouten) folder.
+</br>
+## 1.5 Data arributen
+De oefeningen voor de 'data atributen' module voor javascript bevinden zich in de [data atributen](oefeningen/data_atributten) folder.
+</br>
