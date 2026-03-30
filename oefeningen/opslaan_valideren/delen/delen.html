@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <script src="delen.js" defer></script>
+        <title>delen</title>
+        <link rel="icon" href="javascript.ico" type="image/x-icon">
+        <link rel="stylesheet" href="default.css">
+    </head>
+    <body>
+        <label>Getal 1:
+            <span id="getal1Fout" hidden class="fout">Groter of gelijk aan 0</span>
+            <input id="getal1" type="number" min="0">
+        </label>
+        <label>Getal 2:
+            <span id="getal2Fout" hidden class="fout">Mistens 1</span>
+            <input id="getal2" required type="number" min="1">
+        </label>
+        <button id="delen" disabled>delen</button>
+        <span id="delenTonen" hidden class="feedback"></span>
+    </body>
+</html>
