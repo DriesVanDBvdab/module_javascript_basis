@@ -11,15 +11,20 @@ const radenButton = document.getElementById("raden");
 const sausWoord = document.getElementById("sausWoord");
 const verkeerdAfbeelding = document.getElementById("verkeerd");
 
-radenButton.onclick = function() {
-    if(pogingen === 10) {
+radenButton.onclick = function () {
+    if (pogingen === 10) {
         return;
     }
     letterInSaus(letterTeRaden.value);
 };
 
+// radenButton.onclick = function () {
+//     console.log("overschreven");
+// };
+
 radenLijst.style.listStyleType = "none";
-letterTeRaden.addEventListener('input', (event) => {      
+letterTeRaden.addEventListener('input', (event) => {
+    //  console.log(this);
     event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
     if (event.target.value.length > 0) {
         radenButton.disabled = false;
@@ -29,18 +34,18 @@ letterTeRaden.addEventListener('input', (event) => {
 });
 
 async function loadJsonFile(callback) {
-  try {
-    const response = await fetch('sauzen.json');
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    try {
+        const response = await fetch('sauzen.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Sauzen JSON: ', data);
+        callback(data);
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
     }
-    const data = await response.json();
-    console.log('Sauzen JSON: ', data);
-    verwerkSauzen(data);
-    return data;
-  } catch (error) {
-    console.error('Error:', error);
-  }
 }
 
 function verwerkSauzen(data) {
@@ -48,13 +53,24 @@ function verwerkSauzen(data) {
         sausNummer = Math.floor(Math.random() * data.length);
         console.log('JSON data:', data[sausNummer]);
         gekozenSaus = data[sausNummer];
-        for (let i = 0; i < gekozenSaus.length; i++) {
-            geradenLetters += ".";
-        }
+        // for (let i = 0; i < gekozenSaus.length; i++) {
+        //     geradenLetters += ".";
+        // }  
+        geradenLetters = woordNaarKarakter(gekozenSaus);      
         sausWoord.innerHTML = geradenLetters;
     } else {
         console.log('No data available to process.');
     }
+}
+
+function woordNaarKarakter(woord) {
+    let sReturnValue = "";
+
+    for (let i = 0; i < woord.length; i++) {
+        sReturnValue += ".";
+    }
+
+    return sReturnValue;
 }
 
 function letterInSaus(letter) {
@@ -62,13 +78,13 @@ function letterInSaus(letter) {
     let letterGevonden = false;
     for (let i = 0; i < gekozenSaus.length; i++) {
         const currentLetter = gekozenSaus[i];
-        if(currentLetter === letter) {
+        if (currentLetter === letter) {
             geradenLettersArray[i] = letter;
             letterGevonden = true;
 
-        } 
+        }
     }
-    if(!letterGevonden) {
+    if (!letterGevonden) {
         updateAfbeelding();
     }
 
