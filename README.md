@@ -23,4 +23,6 @@ De oefeningen voor de `gegevens valideren en opslaan` module voor javascript bev
 ## 1.11 Werken met JSON
 De oefeningen voor de `werken met JSON` module voor javascript bevinden zich in de [werken met JSON](oefeningen/11_werken_met_JSON) folder.</br>
 ## 1.12 Gegevens van websites gebruiken
-De oefeningen voor de `gegevens van websites gebruiken` module voor javascript bevinden zich in de [gegevens can websites](oefeningen/12_gegevens_van_websites) folder.</br>
+De oefeningen voor de `gegevens van websites gebruiken` module voor javascript bevinden zich in de [gegevens van websites](oefeningen/12_gegevens_van_websites) folder.</br>
+## 1.13 Request
+De oefeningen voor de `request` module voor javascript bevinden zich in de [request](oefeningen/13_request) folder.</br>
