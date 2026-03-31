@@ -26,3 +26,5 @@ De oefeningen voor de `werken met JSON` module voor javascript bevinden zich in 
 De oefeningen voor de `gegevens van websites gebruiken` module voor javascript bevinden zich in de [gegevens van websites](oefeningen/12_gegevens_van_websites) folder.</br>
 ## 1.13 Request
 De oefeningen voor de `request` module voor javascript bevinden zich in de [request](oefeningen/13_request) folder.</br>
+## 1.14 Herhalingsoefeningen
+De oefeningen voor de `herhalingsoefeningen` module voor javascript bevinden zich in de [herhalingsoefeningen](oefeningen/14_herhalingsoefeningen) folder.</br>
